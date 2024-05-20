@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/Css/Estilo_home.css">
+
+    <title>INICIO</title>
+</head>
+<body>
+    <div class="container">
+        <div class="Home">
+            <h1>Inicio de Sesión</h1>
+            <h1>Concedido</h1>
+        </div>
+        
+        <div class="btn-container">
+            <button onclick="window.location.href='/templates/RecuperarContraseña.html'" class="btn btn-primary custom-btn">¿Olvidaste tu contraseña?</button>
+            <button type="button" class="btn btn-primary custom-btn" id="btnlogout">Cerrar Sesión</button>
+            <button type="button" class="btn btn-info custom-btn" id="btndelete" data-toggle="modal" data-target="#deleteUserModal">Eliminar Usuario</button>
+        </div>
+    </div>
+    
+    <div class="modal fade custom-modal" id="deleteUserModal" tabindex="-1" aria-labelledby="deleteUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteUserModalLabel">Eliminar Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="deleteUserForm">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña:</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password" required>
+                                <button class="btn btn-outline-secondary" type="button" id="togglePassword">Mostrar</button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-danger" id="confirmDelete">Eliminar Usuario</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="module" src="/Controller/home.js"></script>
+</body>
+</html>

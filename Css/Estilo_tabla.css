@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("/imagenes/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    color: #c62828; 
+    margin: 20px auto;
+}
+
+h3 {
+    color: #c62828; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-custom th {
+    background-color: #c62828; 
+    color: white;
+    text-align: center;
+    border: 1px solid #c62828; 
+    box-shadow: 0 0 10px rgba(198, 40, 40, 0.3); 
+    padding: 8px;
+}
+
+.table-custom td {
+    border: 1px solid #c62828; 
+    padding: 8px;
+    text-align: left;
+    color: #000; 
+}
+
+.table-custom tr:nth-child(even) {
+    background-color: #ffcdd2; 
+}
+
+.table-custom tr:hover {
+    background-color: #ffcdd2; 
+}
+
+.btn-primary {
+    background-color: #c62828; 
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #b71c1c; 
+}
+
+.btn-outline-secondary {
+    border-color: #ccc;
+    color: #333;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.btn-danger {
+    background-color: #ff1100; 
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #d32f2f; 
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+.modal-header, .modal-body {
+    color: #000; 
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc; 
+}

@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("/imagenes/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    font-family: Baskerville, serif;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 40px;
+    width: 400px; 
+    height: 400px; 
+    border-radius: 50%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto; 
+}
+
+.container .Home {
+    margin-bottom: 20px;
+}
+
+.container .btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.container .btn-container .btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.container .btn-container .btn.btn-danger {
+    background-color: #ffffff;
+    color: #050031;
+}
+
+.container .btn-container .btn.btn-danger:hover {
+    background-color: #0d47a1;
+    color: #ffffff;
+}
+
+.container .btn-container .btn.btn-primary {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.container .btn-container .btn.btn-primary:hover {
+    background-color: #0d47a1;
+    color: #ffffff;
+}
+
+.container .btn-container .btn.btn-info {
+    background-color: #ffffff;
+    color: #007bff;
+}
+
+.container .btn-container .btn.btn-info:hover {
+    background-color: #0d47a1;
+    color: #ffffff;
+}
