@@ -1,4 +1,4 @@
-import { registerauth, verification, addregister } from './Global.js';
+import { registerauth, verification, setregister } from './Global.js';
 
 const formulario = document.getElementById('LogUp-Form');
 const boton = document.getElementById('rgsbtn');
@@ -11,6 +11,9 @@ async function register() {
     const apellidos = formulario['edtape'].value;
     const fecha = formulario['edtfecha'].value;
     const cedula = formulario['edtcc'].value;
+    const estado = formulario['edtstc'].value;
+    const rh = formulario['edtrh'].value;
+    const genero = formulario['edtgnr'].value;
     const telefono = formulario['edttlf'].value;
     const direccion = formulario['edtdirec'].value;
     const email = formulario['edtemail'].value;
@@ -18,7 +21,8 @@ async function register() {
     const confirmEmail = formulario['confirmEmail'].value;
     const confirmPassword = formulario['confirmPassword'].value;
     const accountType = formulario['accountType'].value;
-    
+    const adminPassword = formulario['adminPassword'].value;
+
     if (!email || !psw || !confirmEmail || !confirmPassword || !accountType) {
         alert('Por favor completa todos los campos.');
         return;
@@ -44,10 +48,18 @@ async function register() {
         return;
     }
 
+    if (accountType === 'administrador' && adminPassword !== 'COLOMBIA2018') {
+        alert('Contraseña de administrador incorrecta.');
+        return;
+    }
+
     try {
         const verificar = await registerauth(email, psw);
-        await addregister(nombres, apellidos, fecha, cedula, telefono, direccion, email, accountType);
-        verification();
+        
+        await setregister(nombres, apellidos, fecha, cedula, estado, rh, genero, telefono, direccion, email, accountType);
+
+        await verification();
+
         alert('Registro exitoso para ' + email + '. Correo de Verificación ha sido enviado.');
         window.location.href = "/index.html";
     } catch (error) {
